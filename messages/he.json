@@ -142,5 +142,37 @@
     "remaining": "נותרו",
     "noSessions": "אין משמרות",
     "page": "עמוד"
+  },
+  "contract": {
+    "title": "הגדרות חוזה",
+    "rewardType": "סוג תגמול",
+    "hourly": "שעתי",
+    "hourlyDesc": "תשלום לפי שעות עבודה (טיימר)",
+    "daily": "יומי",
+    "dailyDesc": "תשלום לפי ימי עבודה (סימון נוכחות)",
+    "global": "גלובלי",
+    "globalDesc": "סכום חודשי קבוע",
+    "cancellationPolicy": "מדיניות ביטולים",
+    "noticeHours": "שעות הודעה מראש",
+    "shortNoticePayPercent": "תשלום בביטול מאוחר (%)",
+    "shortNoticeExplanation": "אחוז התשלום כאשר הביטול מתבצע עם פחות מ-{hours} שעות הודעה מראש",
+    "dailyRate": "תעריף יומי",
+    "globalMonthlyAmount": "סכום חודשי קבוע",
+    "notes": "הערות",
+    "notesPlaceholder": "הערות נוספות לחוזה...",
+    "save": "שמור",
+    "cancel": "ביטול",
+    "contractSettings": "הגדרות חוזה",
+    "configured": "מוגדר",
+    "notConfigured": "לא מוגדר"
+  },
+  "chat": {
+    "title": "עוזר זכויות",
+    "openChat": "פתח צ׳אט",
+    "close": "סגור",
+    "placeholder": "שאלו על זכויות עובדים...",
+    "send": "שלח",
+    "welcomeMessage": "שלום! אני העוזר שלך לזכויות עובדים. שאלו אותי על הבראה, מחלה, פנסיה, ביטוח לאומי, ועוד.",
+    "typing": "מקליד..."
   }
 }

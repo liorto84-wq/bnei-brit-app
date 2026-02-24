@@ -142,5 +142,37 @@
     "remaining": "المتبقية",
     "noSessions": "لا توجد ورديات",
     "page": "صفحة"
+  },
+  "contract": {
+    "title": "إعدادات العقد",
+    "rewardType": "نوع المكافأة",
+    "hourly": "بالساعة",
+    "hourlyDesc": "الدفع حسب ساعات العمل (مؤقت)",
+    "daily": "يومي",
+    "dailyDesc": "الدفع حسب أيام العمل (تسجيل حضور)",
+    "global": "شامل",
+    "globalDesc": "مبلغ شهري ثابت",
+    "cancellationPolicy": "سياسة الإلغاء",
+    "noticeHours": "ساعات الإشعار المسبق",
+    "shortNoticePayPercent": "الدفع عند الإلغاء المتأخر (%)",
+    "shortNoticeExplanation": "نسبة الدفع عندما يتم الإلغاء بأقل من {hours} ساعات إشعار مسبق",
+    "dailyRate": "الأجر اليومي",
+    "globalMonthlyAmount": "المبلغ الشهري الثابت",
+    "notes": "ملاحظات",
+    "notesPlaceholder": "ملاحظات إضافية للعقد...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "contractSettings": "إعدادات العقد",
+    "configured": "تم الإعداد",
+    "notConfigured": "لم يتم الإعداد"
+  },
+  "chat": {
+    "title": "مساعد الحقوق",
+    "openChat": "افتح المحادثة",
+    "close": "إغلاق",
+    "placeholder": "اسأل عن حقوق العمال...",
+    "send": "إرسال",
+    "welcomeMessage": "مرحباً! أنا مساعدك لحقوق العمال. اسألني عن النقاهة، الإجازة المرضية، المعاش، التأمين الوطني، والمزيد.",
+    "typing": "يكتب..."
   }
 }

@@ -8,7 +8,9 @@ import { RTL_LOCALES } from "@/lib/constants";
 import { EmployerProvider } from "@/contexts/employer-context";
 import { VisitReportingProvider } from "@/contexts/visit-reporting-context";
 import { ComplianceProvider } from "@/contexts/compliance-context";
+import { ChatProvider } from "@/contexts/chat-context";
 import Header from "@/components/header";
+import ChatWidget from "@/components/chat-widget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,8 +60,11 @@ export default async function LocaleLayout({
           <EmployerProvider>
             <VisitReportingProvider>
               <ComplianceProvider>
-                <Header />
-                <main>{children}</main>
+                <ChatProvider>
+                  <Header />
+                  <main>{children}</main>
+                  <ChatWidget />
+                </ChatProvider>
               </ComplianceProvider>
             </VisitReportingProvider>
           </EmployerProvider>

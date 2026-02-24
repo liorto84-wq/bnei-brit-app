@@ -142,5 +142,37 @@
     "remaining": "ቀሪ",
     "noSessions": "ፈረቃዎች የሉም",
     "page": "ገጽ"
+  },
+  "contract": {
+    "title": "የውል ቅንብሮች",
+    "rewardType": "የክፍያ ዓይነት",
+    "hourly": "በሰዓት",
+    "hourlyDesc": "በሰራ ሰዓታት መሠረት ክፍያ (ሰዓት ቆጣሪ)",
+    "daily": "በቀን",
+    "dailyDesc": "በሥራ ቀናት መሠረት ክፍያ (የመገኘት ምልክት)",
+    "global": "ጠቅላላ",
+    "globalDesc": "ቋሚ ወርሃዊ መጠን",
+    "cancellationPolicy": "የስረዛ ፖሊሲ",
+    "noticeHours": "የቅድሚያ ማስጠንቀቂያ ሰዓታት",
+    "shortNoticePayPercent": "በዘገየ ስረዛ ክፍያ (%)",
+    "shortNoticeExplanation": "ስረዛው ከ{hours} ሰዓታት ያነሰ ማስጠንቀቂያ ሲሰጥ የክፍያ መቶኛ",
+    "dailyRate": "የቀን ክፍያ",
+    "globalMonthlyAmount": "ቋሚ ወርሃዊ መጠን",
+    "notes": "ማስታወሻዎች",
+    "notesPlaceholder": "ለውል ተጨማሪ ማስታወሻዎች...",
+    "save": "አስቀምጥ",
+    "cancel": "ሰርዝ",
+    "contractSettings": "የውል ቅንብሮች",
+    "configured": "ተዋቅሯል",
+    "notConfigured": "አልተዋቀረም"
+  },
+  "chat": {
+    "title": "የመብቶች ረዳት",
+    "openChat": "ውይይት ክፈት",
+    "close": "ዝጋ",
+    "placeholder": "ስለ ሠራተኛ መብቶች ይጠይቁ...",
+    "send": "ላክ",
+    "welcomeMessage": "ሰላም! የሠራተኛ መብቶች ረዳትዎ ነኝ። ስለ እረፍት ክፍያ፣ የታመመ ፈቃድ፣ ጡረታ፣ ኢንሹራንስ እና ሌሎችም ይጠይቁኝ።",
+    "typing": "በመጻፍ ላይ..."
   }
 }
