@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { RTL_LOCALES } from "@/lib/constants";
 import { EmployerProvider } from "@/contexts/employer-context";
 import { VisitReportingProvider } from "@/contexts/visit-reporting-context";
+import { ComplianceProvider } from "@/contexts/compliance-context";
 import Header from "@/components/header";
 
 const geistSans = Geist({
@@ -56,8 +57,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <EmployerProvider>
             <VisitReportingProvider>
-              <Header />
-              <main>{children}</main>
+              <ComplianceProvider>
+                <Header />
+                <main>{children}</main>
+              </ComplianceProvider>
             </VisitReportingProvider>
           </EmployerProvider>
         </NextIntlClientProvider>

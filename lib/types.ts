@@ -50,3 +50,30 @@ export interface Holiday {
   key: string;
   date: string;
 }
+
+// Compliance & Pension types
+export type DepositStatus = "compliant" | "pending" | "overdue";
+
+export interface PensionBreakdown {
+  employerId: string;
+  employerContribution: number;
+  employeeContribution: number;
+  severanceContribution: number;
+  totalMonthlyPension: number;
+}
+
+export interface EmployerDepositStatus {
+  employerId: string;
+  status: DepositStatus;
+  lastDepositDate: string | null;
+}
+
+export interface QuarterlyNIEstimate {
+  quarter: number;
+  year: number;
+  estimatedEarnings: number;
+  estimatedNIPayment: number;
+  sessionsEarnings: number;
+}
+
+export type ComplianceViewMode = "worker" | "employer";

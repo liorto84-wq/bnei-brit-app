@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useEmployers } from "@/contexts/employer-context";
 import EmployerCard from "@/components/employer-card";
 import HolidayAlertModal from "@/components/holiday-alert-modal";
+import ComplianceSection from "@/components/compliance-section";
 
 export default function DashboardContent() {
   const t = useTranslations("dashboard");
@@ -42,6 +43,9 @@ export default function DashboardContent() {
           ))}
         </div>
       )}
+
+      {/* Compliance & Pension Hub */}
+      <ComplianceSection />
     </div>
   );
 }
