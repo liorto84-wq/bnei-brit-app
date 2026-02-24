@@ -5,6 +5,7 @@ import { useEmployers } from "@/contexts/employer-context";
 import EmployerCard from "@/components/employer-card";
 import HolidayAlertModal from "@/components/holiday-alert-modal";
 import ComplianceSection from "@/components/compliance-section";
+import GeneratePdfButton from "@/components/generate-pdf-button";
 
 export default function DashboardContent() {
   const t = useTranslations("dashboard");
@@ -21,16 +22,21 @@ export default function DashboardContent() {
 
       {/* Total Balance Card */}
       <div className="mb-8 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-700 p-6 text-white shadow-lg">
-        <p className="text-sm font-medium text-teal-100">
-          {t("totalBalance")}
-        </p>
-        <p className="mt-1 text-4xl font-bold">
-          {tc("currency")}
-          {totalBalance.toLocaleString()}
-        </p>
-        <p className="mt-2 text-sm text-teal-200">
-          {employers.length} {t("totalEmployers")}
-        </p>
+        <div className="flex items-start justify-between">
+          <div>
+            <p className="text-sm font-medium text-teal-100">
+              {t("totalBalance")}
+            </p>
+            <p className="mt-1 text-4xl font-bold">
+              {tc("currency")}
+              {totalBalance.toLocaleString()}
+            </p>
+            <p className="mt-2 text-sm text-teal-200">
+              {employers.length} {t("totalEmployers")}
+            </p>
+          </div>
+          <GeneratePdfButton />
+        </div>
       </div>
 
       {/* Employer Cards Grid */}
