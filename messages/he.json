@@ -1,0 +1,79 @@
+{
+  "common": {
+    "currency": "₪",
+    "perMonth": "לחודש",
+    "days": "ימים",
+    "hours": "שעות"
+  },
+  "nav": {
+    "appName": "בני ברית",
+    "dashboard": "לוח בקרה",
+    "myJobs": "העבודות שלי"
+  },
+  "dashboard": {
+    "title": "העבודות שלי",
+    "subtitle": "סקירת כל המעסיקים והזכויות שלך",
+    "totalBalance": "סה\"כ יתרה חודשית",
+    "totalEmployers": "מעסיקים",
+    "noEmployers": "אין מעסיקים להצגה"
+  },
+  "employer": {
+    "monthlySalary": "שכר חודשי",
+    "hoursPerWeek": "שעות בשבוע",
+    "convalescencePay": "דמי הבראה",
+    "convalescencePerMonth": "דמי הבראה לחודש",
+    "sickLeave": "ימי מחלה",
+    "sickLeaveAccumulated": "ימי מחלה שנצברו",
+    "totalMonthly": "סה\"כ חודשי",
+    "startDate": "תאריך התחלה",
+    "yearsEmployed": "שנות ותק",
+    "reportAbsence": "דיווח היעדרות"
+  },
+  "timer": {
+    "startSession": "התחל עבודה",
+    "endSession": "סיים עבודה",
+    "activeSession": "משמרת פעילה",
+    "currentEarnings": "שכר נוכחי",
+    "lastSession": "משמרת אחרונה",
+    "hourlyRate": "שכר שעתי"
+  },
+  "absence": {
+    "title": "דיווח היעדרות",
+    "selectType": "בחר סוג היעדרות",
+    "sick_leave": "מחלה",
+    "personal": "יום אישי",
+    "vacation": "חופשה",
+    "absenceDate": "תאריך היעדרות",
+    "medicalCertificate": "אישור מחלה",
+    "available": "ימי מחלה זמינים",
+    "noSickDaysLeft": "לא נותרו ימי מחלה",
+    "cancel": "ביטול",
+    "submit": "שלח"
+  },
+  "holiday": {
+    "alertTitle": "התראת חג קרוב",
+    "alertDescription": "{holiday} בתאריך {date}",
+    "cancelVisit": "ביטול ביקור",
+    "reschedule": "תיאום מחדש",
+    "dismissAll": "דלג",
+    "rosh_hashana": "ראש השנה",
+    "rosh_hashana_2": "ראש השנה ב׳",
+    "yom_kippur": "יום כיפור",
+    "sukkot": "סוכות",
+    "simchat_torah": "שמחת תורה",
+    "hanukkah": "חנוכה",
+    "purim": "פורים",
+    "pesach_start": "פסח (תחילה)",
+    "pesach_end": "פסח (סיום)",
+    "yom_haatzmaut": "יום העצמאות",
+    "shavuot": "שבועות"
+  },
+  "language": {
+    "he": "עברית",
+    "ar": "عربية",
+    "ru": "Русский",
+    "uk": "Українська",
+    "am": "አማርኛ",
+    "switchLanguage": "החלף שפה"
+  }
+}

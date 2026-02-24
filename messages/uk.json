@@ -1,0 +1,79 @@
+{
+  "common": {
+    "currency": "₪",
+    "perMonth": "на місяць",
+    "days": "днів",
+    "hours": "годин"
+  },
+  "nav": {
+    "appName": "Бней Бріт",
+    "dashboard": "Панель керування",
+    "myJobs": "Мої роботи"
+  },
+  "dashboard": {
+    "title": "Мої роботи",
+    "subtitle": "Огляд усіх роботодавців та ваших прав",
+    "totalBalance": "Загальний місячний баланс",
+    "totalEmployers": "Роботодавці",
+    "noEmployers": "Немає роботодавців для відображення"
+  },
+  "employer": {
+    "monthlySalary": "Місячна зарплата",
+    "hoursPerWeek": "Годин на тиждень",
+    "convalescencePay": "Оплата одужання",
+    "convalescencePerMonth": "Оплата одужання на місяць",
+    "sickLeave": "Лікарняні дні",
+    "sickLeaveAccumulated": "Накопичені лікарняні дні",
+    "totalMonthly": "Всього на місяць",
+    "startDate": "Дата початку",
+    "yearsEmployed": "Років стажу",
+    "reportAbsence": "Повідомити про відсутність"
+  },
+  "timer": {
+    "startSession": "Почати роботу",
+    "endSession": "Завершити роботу",
+    "activeSession": "Активна зміна",
+    "currentEarnings": "Поточний заробіток",
+    "lastSession": "Остання зміна",
+    "hourlyRate": "Погодинна ставка"
+  },
+  "absence": {
+    "title": "Повідомити про відсутність",
+    "selectType": "Оберіть тип відсутності",
+    "sick_leave": "Лікарняний",
+    "personal": "Особистий день",
+    "vacation": "Відпустка",
+    "absenceDate": "Дата відсутності",
+    "medicalCertificate": "Медична довідка",
+    "available": "Доступні лікарняні дні",
+    "noSickDaysLeft": "Лікарняні дні вичерпано",
+    "cancel": "Скасувати",
+    "submit": "Надіслати"
+  },
+  "holiday": {
+    "alertTitle": "Наближається свято",
+    "alertDescription": "{holiday} — {date}",
+    "cancelVisit": "Скасувати візит",
+    "reschedule": "Перенести",
+    "dismissAll": "Пропустити",
+    "rosh_hashana": "Рош га-Шана",
+    "rosh_hashana_2": "Рош га-Шана 2",
+    "yom_kippur": "Йом Кіпур",
+    "sukkot": "Суккот",
+    "simchat_torah": "Сімхат Тора",
+    "hanukkah": "Ханука",
+    "purim": "Пурім",
+    "pesach_start": "Песах (початок)",
+    "pesach_end": "Песах (закінчення)",
+    "yom_haatzmaut": "День незалежності",
+    "shavuot": "Шавуот"
+  },
+  "language": {
+    "he": "עברית",
+    "ar": "عربية",
+    "ru": "Русский",
+    "uk": "Українська",
+    "am": "አማርኛ",
+    "switchLanguage": "Змінити мову"
+  }
+}

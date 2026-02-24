@@ -1,0 +1,79 @@
+{
+  "common": {
+    "currency": "₪",
+    "perMonth": "በወር",
+    "days": "ቀናት",
+    "hours": "ሰዓታት"
+  },
+  "nav": {
+    "appName": "ብኒ ብሪት",
+    "dashboard": "ዳሽቦርድ",
+    "myJobs": "ሥራዎቼ"
+  },
+  "dashboard": {
+    "title": "ሥራዎቼ",
+    "subtitle": "የሁሉም አሠሪዎች እና መብቶችዎ አጠቃላይ እይታ",
+    "totalBalance": "ጠቅላላ ወርሃዊ ቀሪ ሂሳብ",
+    "totalEmployers": "አሠሪዎች",
+    "noEmployers": "ምንም አሠሪዎች የሉም"
+  },
+  "employer": {
+    "monthlySalary": "ወርሃዊ ደመወዝ",
+    "hoursPerWeek": "በሳምንት ሰዓታት",
+    "convalescencePay": "የእረፍት ክፍያ",
+    "convalescencePerMonth": "ወርሃዊ የእረፍት ክፍያ",
+    "sickLeave": "የታመመ ፈቃድ",
+    "sickLeaveAccumulated": "የተከማቸ የታመመ ፈቃድ",
+    "totalMonthly": "ጠቅላላ ወርሃዊ",
+    "startDate": "የጀመረበት ቀን",
+    "yearsEmployed": "የሥራ ዓመታት",
+    "reportAbsence": "ቀሪነት ሪፖርት"
+  },
+  "timer": {
+    "startSession": "ሥራ ጀምር",
+    "endSession": "ሥራ አቁም",
+    "activeSession": "ንቁ ፈረቃ",
+    "currentEarnings": "የአሁን ገቢ",
+    "lastSession": "የመጨረሻ ፈረቃ",
+    "hourlyRate": "የሰዓት ክፍያ"
+  },
+  "absence": {
+    "title": "ቀሪነት ሪፖርት",
+    "selectType": "የቀሪነት ዓይነት ይምረጡ",
+    "sick_leave": "የታመመ ፈቃድ",
+    "personal": "የግል ቀን",
+    "vacation": "ዕረፍት",
+    "absenceDate": "የቀሪነት ቀን",
+    "medicalCertificate": "የሕክምና ማረጋገጫ",
+    "available": "ያሉ የታመመ ቀናት",
+    "noSickDaysLeft": "የታመመ ቀናት አልቋል",
+    "cancel": "ሰርዝ",
+    "submit": "ላክ"
+  },
+  "holiday": {
+    "alertTitle": "የበዓል ማስጠንቀቂያ",
+    "alertDescription": "{holiday} በ{date}",
+    "cancelVisit": "ጉብኝት ሰርዝ",
+    "reschedule": "እንደገና ቀጠሮ",
+    "dismissAll": "ዝለል",
+    "rosh_hashana": "ሮሽ ሃሻና",
+    "rosh_hashana_2": "ሮሽ ሃሻና 2",
+    "yom_kippur": "ዮም ኪፑር",
+    "sukkot": "ሱኮት",
+    "simchat_torah": "ሲምሃት ቶራ",
+    "hanukkah": "ሃኑካ",
+    "purim": "ፑሪም",
+    "pesach_start": "ፔሳህ (መጀመሪያ)",
+    "pesach_end": "ፔሳህ (መጨረሻ)",
+    "yom_haatzmaut": "የነጻነት ቀን",
+    "shavuot": "ሻቩኦት"
+  },
+  "language": {
+    "he": "עברית",
+    "ar": "عربية",
+    "ru": "Русский",
+    "uk": "Українська",
+    "am": "አማርኛ",
+    "switchLanguage": "ቋንቋ ቀይር"
+  }
+}

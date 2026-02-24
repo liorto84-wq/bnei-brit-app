@@ -1,0 +1,79 @@
+{
+  "common": {
+    "currency": "₪",
+    "perMonth": "в месяц",
+    "days": "дней",
+    "hours": "часов"
+  },
+  "nav": {
+    "appName": "Бней Брит",
+    "dashboard": "Панель управления",
+    "myJobs": "Мои работы"
+  },
+  "dashboard": {
+    "title": "Мои работы",
+    "subtitle": "Обзор всех работодателей и ваших прав",
+    "totalBalance": "Общий месячный баланс",
+    "totalEmployers": "Работодатели",
+    "noEmployers": "Нет работодателей для отображения"
+  },
+  "employer": {
+    "monthlySalary": "Месячная зарплата",
+    "hoursPerWeek": "Часов в неделю",
+    "convalescencePay": "Оплата выздоровления",
+    "convalescencePerMonth": "Оплата выздоровления в месяц",
+    "sickLeave": "Больничные дни",
+    "sickLeaveAccumulated": "Накопленные больничные дни",
+    "totalMonthly": "Всего в месяц",
+    "startDate": "Дата начала",
+    "yearsEmployed": "Лет стажа",
+    "reportAbsence": "Сообщить об отсутствии"
+  },
+  "timer": {
+    "startSession": "Начать работу",
+    "endSession": "Закончить работу",
+    "activeSession": "Активная смена",
+    "currentEarnings": "Текущий заработок",
+    "lastSession": "Последняя смена",
+    "hourlyRate": "Почасовая ставка"
+  },
+  "absence": {
+    "title": "Сообщить об отсутствии",
+    "selectType": "Выберите тип отсутствия",
+    "sick_leave": "Больничный",
+    "personal": "Личный день",
+    "vacation": "Отпуск",
+    "absenceDate": "Дата отсутствия",
+    "medicalCertificate": "Медицинская справка",
+    "available": "Доступные больничные дни",
+    "noSickDaysLeft": "Больничные дни исчерпаны",
+    "cancel": "Отмена",
+    "submit": "Отправить"
+  },
+  "holiday": {
+    "alertTitle": "Приближается праздник",
+    "alertDescription": "{holiday} — {date}",
+    "cancelVisit": "Отменить визит",
+    "reschedule": "Перенести",
+    "dismissAll": "Пропустить",
+    "rosh_hashana": "Рош ха-Шана",
+    "rosh_hashana_2": "Рош ха-Шана 2",
+    "yom_kippur": "Йом Кипур",
+    "sukkot": "Суккот",
+    "simchat_torah": "Симхат Тора",
+    "hanukkah": "Ханука",
+    "purim": "Пурим",
+    "pesach_start": "Песах (начало)",
+    "pesach_end": "Песах (окончание)",
+    "yom_haatzmaut": "День независимости",
+    "shavuot": "Шавуот"
+  },
+  "language": {
+    "he": "עברית",
+    "ar": "عربية",
+    "ru": "Русский",
+    "uk": "Українська",
+    "am": "አማርኛ",
+    "switchLanguage": "Сменить язык"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "common": {
+    "currency": "₪",
+    "perMonth": "شهرياً",
+    "days": "أيام",
+    "hours": "ساعات"
+  },
+  "nav": {
+    "appName": "بني بريت",
+    "dashboard": "لوحة التحكم",
+    "myJobs": "وظائفي"
+  },
+  "dashboard": {
+    "title": "وظائفي",
+    "subtitle": "نظرة عامة على جميع أصحاب العمل والمستحقات",
+    "totalBalance": "إجمالي الرصيد الشهري",
+    "totalEmployers": "أصحاب عمل",
+    "noEmployers": "لا يوجد أصحاب عمل لعرضهم"
+  },
+  "employer": {
+    "monthlySalary": "الراتب الشهري",
+    "hoursPerWeek": "ساعات في الأسبوع",
+    "convalescencePay": "بدل نقاهة",
+    "convalescencePerMonth": "بدل نقاهة شهري",
+    "sickLeave": "أيام مرضية",
+    "sickLeaveAccumulated": "أيام مرضية متراكمة",
+    "totalMonthly": "الإجمالي الشهري",
+    "startDate": "تاريخ البدء",
+    "yearsEmployed": "سنوات العمل",
+    "reportAbsence": "الإبلاغ عن غياب"
+  },
+  "timer": {
+    "startSession": "بدء العمل",
+    "endSession": "إنهاء العمل",
+    "activeSession": "وردية نشطة",
+    "currentEarnings": "الأرباح الحالية",
+    "lastSession": "الوردية الأخيرة",
+    "hourlyRate": "الأجر بالساعة"
+  },
+  "absence": {
+    "title": "الإبلاغ عن غياب",
+    "selectType": "اختر نوع الغياب",
+    "sick_leave": "إجازة مرضية",
+    "personal": "يوم شخصي",
+    "vacation": "إجازة",
+    "absenceDate": "تاريخ الغياب",
+    "medicalCertificate": "شهادة طبية",
+    "available": "أيام مرضية متاحة",
+    "noSickDaysLeft": "لا توجد أيام مرضية متبقية",
+    "cancel": "إلغاء",
+    "submit": "إرسال"
+  },
+  "holiday": {
+    "alertTitle": "تنبيه عطلة قادمة",
+    "alertDescription": "{holiday} بتاريخ {date}",
+    "cancelVisit": "إلغاء الزيارة",
+    "reschedule": "إعادة جدولة",
+    "dismissAll": "تخطي",
+    "rosh_hashana": "رأس السنة العبرية",
+    "rosh_hashana_2": "رأس السنة العبرية ٢",
+    "yom_kippur": "يوم الغفران",
+    "sukkot": "عيد العرش",
+    "simchat_torah": "فرحة التوراة",
+    "hanukkah": "حانوكا",
+    "purim": "بوريم",
+    "pesach_start": "عيد الفصح (بداية)",
+    "pesach_end": "عيد الفصح (نهاية)",
+    "yom_haatzmaut": "يوم الاستقلال",
+    "shavuot": "شافوعوت"
+  },
+  "language": {
+    "he": "עברית",
+    "ar": "عربية",
+    "ru": "Русский",
+    "uk": "Українська",
+    "am": "አማርኛ",
+    "switchLanguage": "تغيير اللغة"
+  }
+}
