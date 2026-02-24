@@ -87,7 +87,7 @@ export async function generateMonthlySummary(
   const lm = flattenMessages(localeMessages);
   const hm = flattenMessages(hebrewRaw);
 
-  const ctx = createLayout(doc, fonts, isSingleColumn, lm, hm);
+  const ctx = createLayout(doc, fonts, locale, isSingleColumn, lm, hm);
 
   // Title
   const now = new Date();
