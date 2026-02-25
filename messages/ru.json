@@ -8,7 +8,9 @@
   "nav": {
     "appName": "Бней Брит",
     "dashboard": "Панель управления",
-    "myJobs": "Мои работы"
+    "myJobs": "Мои работы",
+    "addEmployer": "Добавить работодателя",
+    "financialOverview": "Финансовый обзор"
   },
   "dashboard": {
     "title": "Мои работы",
@@ -27,7 +29,10 @@
     "totalMonthly": "Всего в месяц",
     "startDate": "Дата начала",
     "yearsEmployed": "Лет стажа",
-    "reportAbsence": "Сообщить об отсутствии"
+    "reportAbsence": "Сообщить об отсутствии",
+    "editEmployer": "Редактировать работодателя",
+    "editTitle": "Редактирование данных работодателя",
+    "saveChanges": "Сохранить изменения"
   },
   "timer": {
     "startSession": "Начать работу",
@@ -165,6 +170,38 @@
     "contractSettings": "Настройки договора",
     "configured": "Настроено",
     "notConfigured": "Не настроено"
+  },
+  "addEmployer": {
+    "pageTitle": "Добавить нового работодателя",
+    "pageSubtitle": "Введите данные нового работодателя",
+    "employerDetails": "Данные работодателя",
+    "name": "Имя работодателя",
+    "namePlaceholder": "Введите имя работодателя",
+    "monthlySalary": "Месячная зарплата",
+    "hoursPerWeek": "Часов в неделю",
+    "startDate": "Дата начала",
+    "rewardSection": "Тип оплаты",
+    "cancellationSection": "Политика отмены",
+    "submit": "Добавить работодателя",
+    "cancel": "Отмена",
+    "saving": "Сохранение...",
+    "requiredField": "Обязательное поле"
+  },
+  "financial": {
+    "pageTitle": "Финансовый обзор",
+    "pageSubtitle": "Сводка всех доходов и льгот",
+    "totalMonthlyEarnings": "Общий месячный доход",
+    "totalSessionEarnings": "Общий доход от смен",
+    "pendingItems": "Ожидающие депозиты",
+    "perEmployerBreakdown": "По работодателям",
+    "workSessionEarnings": "Доход от смен",
+    "sessionsCompleted": "Смен завершено",
+    "totalHoursWorked": "Всего отработано часов",
+    "pensionContributions": "Пенсионные взносы",
+    "quarterlyNI": "Квартальное нац. страхование",
+    "noSessions": "Нет смен",
+    "noPendingItems": "Нет ожидающих депозитов",
+    "allDepositsCompliant": "Все депозиты в порядке"
   },
   "chat": {
     "title": "Помощник по правам",

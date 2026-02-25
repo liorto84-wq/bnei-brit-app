@@ -10,10 +10,14 @@ import {
 } from "react";
 import type {
   EmployerDepositStatus,
-  DepositStatus,
   ComplianceViewMode,
 } from "@/lib/types";
 import { useEmployers } from "./employer-context";
+import { createClient } from "@/lib/supabase/client";
+import {
+  fetchDepositStatuses,
+  markAsDeposited as markAsDepositedQuery,
+} from "@/lib/supabase/queries/compliance";
 
 type ComplianceTab = "pension" | "ni" | "peaceOfMind";
 
@@ -28,14 +32,8 @@ interface ComplianceContextValue {
 
 const ComplianceContext = createContext<ComplianceContextValue | null>(null);
 
-const MOCK_STATUSES: Record<string, DepositStatus> = {
-  "1": "compliant",
-  "2": "pending",
-  "3": "compliant",
-};
-
 export function ComplianceProvider({ children }: { children: ReactNode }) {
-  const { employers } = useEmployers();
+  const { employers, isLoading: employersLoading } = useEmployers();
   const [depositStatuses, setDepositStatuses] = useState<
     Map<string, EmployerDepositStatus>
   >(new Map());
@@ -43,27 +41,60 @@ export function ComplianceProvider({ children }: { children: ReactNode }) {
   const [activeTab, setActiveTab] = useState<ComplianceTab>("pension");
 
   useEffect(() => {
-    const initial = new Map<string, EmployerDepositStatus>();
-    employers.forEach((emp) => {
-      const status = MOCK_STATUSES[emp.id] ?? "pending";
-      initial.set(emp.id, {
-        employerId: emp.id,
-        status,
-        lastDepositDate: status === "compliant" ? "2026-01-15" : null,
+    if (employersLoading) return;
+
+    const supabase = createClient();
+    fetchDepositStatuses(supabase)
+      .then((statuses) => {
+        const statusMap = new Map<string, EmployerDepositStatus>();
+        for (const s of statuses) {
+          statusMap.set(s.employerId, s);
+        }
+        // Add default "pending" for employers without a deposit record
+        for (const emp of employers) {
+          if (!statusMap.has(emp.id)) {
+            statusMap.set(emp.id, {
+              employerId: emp.id,
+              status: "pending",
+              lastDepositDate: null,
+            });
+          }
+        }
+        setDepositStatuses(statusMap);
+      })
+      .catch((err) => {
+        console.error("Failed to load compliance data:", err);
+        // Fallback: set all employers as pending
+        const fallbackMap = new Map<string, EmployerDepositStatus>();
+        employers.forEach((emp) => {
+          fallbackMap.set(emp.id, {
+            employerId: emp.id,
+            status: "pending",
+            lastDepositDate: null,
+          });
+        });
+        setDepositStatuses(fallbackMap);
       });
-    });
-    setDepositStatuses(initial);
-  }, [employers]);
+  }, [employers, employersLoading]);
 
   const markAsDeposited = useCallback((employerId: string) => {
+    const today = new Date().toISOString().split("T")[0];
+
+    // Optimistic update
     setDepositStatuses((prev) => {
       const next = new Map(prev);
       next.set(employerId, {
         employerId,
         status: "compliant",
-        lastDepositDate: new Date().toISOString().split("T")[0],
+        lastDepositDate: today,
       });
       return next;
+    });
+
+    // Persist to Supabase
+    const supabase = createClient();
+    markAsDepositedQuery(supabase, employerId).catch((err) => {
+      console.error("Failed to mark as deposited:", err);
     });
   }, []);
 

@@ -8,7 +8,9 @@
   "nav": {
     "appName": "בני ברית",
     "dashboard": "לוח בקרה",
-    "myJobs": "העבודות שלי"
+    "myJobs": "העבודות שלי",
+    "addEmployer": "הוסף מעסיק",
+    "financialOverview": "סקירה פיננסית"
   },
   "dashboard": {
     "title": "העבודות שלי",
@@ -27,7 +29,10 @@
     "totalMonthly": "סה\"כ חודשי",
     "startDate": "תאריך התחלה",
     "yearsEmployed": "שנות ותק",
-    "reportAbsence": "דיווח היעדרות"
+    "reportAbsence": "דיווח היעדרות",
+    "editEmployer": "עריכת מעסיק",
+    "editTitle": "עריכת פרטי מעסיק",
+    "saveChanges": "שמור שינויים"
   },
   "timer": {
     "startSession": "התחל עבודה",
@@ -165,6 +170,38 @@
     "contractSettings": "הגדרות חוזה",
     "configured": "מוגדר",
     "notConfigured": "לא מוגדר"
+  },
+  "addEmployer": {
+    "pageTitle": "הוספת מעסיק חדש",
+    "pageSubtitle": "הזן את פרטי המעסיק החדש",
+    "employerDetails": "פרטי מעסיק",
+    "name": "שם מעסיק",
+    "namePlaceholder": "הזן שם מעסיק",
+    "monthlySalary": "שכר חודשי",
+    "hoursPerWeek": "שעות בשבוע",
+    "startDate": "תאריך התחלה",
+    "rewardSection": "סוג תגמול",
+    "cancellationSection": "מדיניות ביטולים",
+    "submit": "הוסף מעסיק",
+    "cancel": "ביטול",
+    "saving": "שומר...",
+    "requiredField": "שדה חובה"
+  },
+  "financial": {
+    "pageTitle": "סקירה פיננסית",
+    "pageSubtitle": "סיכום כל ההכנסות וההטבות שלך",
+    "totalMonthlyEarnings": "סה\"כ הכנסה חודשית",
+    "totalSessionEarnings": "סה\"כ הכנסות ממשמרות",
+    "pendingItems": "הפקדות ממתינות",
+    "perEmployerBreakdown": "פירוט לפי מעסיק",
+    "workSessionEarnings": "הכנסות ממשמרות",
+    "sessionsCompleted": "משמרות שהושלמו",
+    "totalHoursWorked": "סה\"כ שעות עבודה",
+    "pensionContributions": "הפרשות פנסיה",
+    "quarterlyNI": "ביטוח לאומי רבעוני",
+    "noSessions": "אין משמרות",
+    "noPendingItems": "אין הפקדות ממתינות",
+    "allDepositsCompliant": "כל ההפקדות תקינות"
   },
   "chat": {
     "title": "עוזר זכויות",

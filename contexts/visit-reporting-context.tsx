@@ -4,6 +4,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useState,
   type ReactNode,
 } from "react";
@@ -14,8 +15,26 @@ import type {
   HolidayDecision,
   HolidayDecisionRecord,
 } from "@/lib/types";
-import { generateId, getHourlyRate } from "@/lib/utils";
+import { getHourlyRate } from "@/lib/utils";
 import { useEmployers } from "./employer-context";
+import { createClient } from "@/lib/supabase/client";
+import {
+  fetchActiveSessions,
+  fetchCompletedSessions,
+  insertWorkSession,
+  endWorkSession,
+} from "@/lib/supabase/queries/work-sessions";
+import {
+  fetchAbsences,
+  insertAbsence,
+} from "@/lib/supabase/queries/absences";
+import {
+  fetchHolidayDecisions,
+  insertHolidayDecision,
+  fetchDismissedHolidays,
+  dismissHoliday as dismissHolidayQuery,
+} from "@/lib/supabase/queries/holidays";
+import type { AbsenceTypeEnum, HolidayDecisionEnum } from "@/lib/supabase/database.types";
 
 interface VisitReportingContextValue {
   // Timer
@@ -51,7 +70,7 @@ const VisitReportingContext =
   createContext<VisitReportingContextValue | null>(null);
 
 export function VisitReportingProvider({ children }: { children: ReactNode }) {
-  const { employers } = useEmployers();
+  const { employers, isLoading: employersLoading } = useEmployers();
 
   const [activeSessions, setActiveSessions] = useState<
     Map<string, WorkSession>
@@ -65,20 +84,71 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
     new Set()
   );
 
+  // Load data from Supabase on mount (after employers are loaded)
+  useEffect(() => {
+    if (employersLoading) return;
+
+    const supabase = createClient();
+
+    Promise.all([
+      fetchActiveSessions(supabase),
+      fetchCompletedSessions(supabase),
+      fetchAbsences(supabase),
+      fetchHolidayDecisions(supabase),
+      fetchDismissedHolidays(supabase),
+    ])
+      .then(([active, completed, abs, decisions, dismissed]) => {
+        const activeMap = new Map<string, WorkSession>();
+        for (const s of active) {
+          activeMap.set(s.employerId, s);
+        }
+        setActiveSessions(activeMap);
+        setCompletedSessions(completed);
+        setAbsences(abs);
+        setHolidayDecisions(decisions);
+        setDismissedHolidays(dismissed);
+      })
+      .catch((err) => {
+        console.error("Failed to load visit reporting data:", err);
+      });
+  }, [employersLoading]);
+
   const startSession = useCallback((employerId: string) => {
-    const session: WorkSession = {
-      id: generateId(),
+    const supabase = createClient();
+
+    // Optimistic: create a temp session locally
+    const tempSession: WorkSession = {
+      id: `temp-${Date.now()}`,
       employerId,
       startTime: new Date().toISOString(),
     };
     setActiveSessions((prev) => {
       const next = new Map(prev);
-      next.set(employerId, session);
+      next.set(employerId, tempSession);
       return next;
     });
+
+    // Persist to Supabase
+    insertWorkSession(supabase, employerId)
+      .then((session) => {
+        setActiveSessions((prev) => {
+          const next = new Map(prev);
+          next.set(employerId, session);
+          return next;
+        });
+      })
+      .catch((err) => {
+        console.error("Failed to start session:", err);
+        // Revert optimistic update
+        setActiveSessions((prev) => {
+          const next = new Map(prev);
+          next.delete(employerId);
+          return next;
+        });
+      });
   }, []);
 
-  const endSession = useCallback(
+  const endSessionCb = useCallback(
     (employerId: string) => {
       setActiveSessions((prev) => {
         const session = prev.get(employerId);
@@ -99,7 +169,16 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
           earnings,
         };
 
+        // Optimistic update
         setCompletedSessions((prev) => [completed, ...prev]);
+
+        // Persist to Supabase (skip temp sessions that failed to save)
+        if (!session.id.startsWith("temp-")) {
+          const supabase = createClient();
+          endWorkSession(supabase, session.id, earnings).catch((err) => {
+            console.error("Failed to end session:", err);
+          });
+        }
 
         const next = new Map(prev);
         next.delete(employerId);
@@ -123,15 +202,35 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
       date: string,
       medicalCertificateFileName?: string
     ) => {
-      const record: AbsenceRecord = {
-        id: generateId(),
+      // Optimistic update
+      const tempRecord: AbsenceRecord = {
+        id: `temp-${Date.now()}`,
         employerId,
         type,
         date,
         createdAt: new Date().toISOString(),
         medicalCertificateFileName,
       };
-      setAbsences((prev) => [...prev, record]);
+      setAbsences((prev) => [...prev, tempRecord]);
+
+      // Persist to Supabase
+      const supabase = createClient();
+      insertAbsence(
+        supabase,
+        employerId,
+        type as AbsenceTypeEnum,
+        date,
+        medicalCertificateFileName
+      )
+        .then((record) => {
+          setAbsences((prev) =>
+            prev.map((a) => (a.id === tempRecord.id ? record : a))
+          );
+        })
+        .catch((err) => {
+          console.error("Failed to report absence:", err);
+          setAbsences((prev) => prev.filter((a) => a.id !== tempRecord.id));
+        });
     },
     []
   );
@@ -152,19 +251,39 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
       holidayKey: string,
       decision: HolidayDecision
     ) => {
+      // Optimistic update
       setHolidayDecisions((prev) => [
         ...prev,
         { employerId, holidayDate, holidayKey, decision },
       ]);
+
+      // Persist to Supabase
+      const supabase = createClient();
+      insertHolidayDecision(
+        supabase,
+        employerId,
+        holidayKey,
+        holidayDate,
+        decision as HolidayDecisionEnum
+      ).catch((err) => {
+        console.error("Failed to record holiday decision:", err);
+      });
     },
     []
   );
 
-  const dismissHoliday = useCallback((holidayKey: string) => {
+  const dismissHolidayCb = useCallback((holidayKey: string) => {
+    // Optimistic update
     setDismissedHolidays((prev) => {
       const next = new Set(prev);
       next.add(holidayKey);
       return next;
+    });
+
+    // Persist to Supabase
+    const supabase = createClient();
+    dismissHolidayQuery(supabase, holidayKey).catch((err) => {
+      console.error("Failed to dismiss holiday:", err);
     });
   }, []);
 
@@ -174,7 +293,7 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
         activeSessions,
         completedSessions,
         startSession,
-        endSession,
+        endSession: endSessionCb,
         getLastSession,
         absences,
         reportAbsence,
@@ -182,7 +301,7 @@ export function VisitReportingProvider({ children }: { children: ReactNode }) {
         holidayDecisions,
         dismissedHolidays,
         recordHolidayDecision,
-        dismissHoliday,
+        dismissHoliday: dismissHolidayCb,
       }}
     >
       {children}

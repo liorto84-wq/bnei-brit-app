@@ -8,7 +8,9 @@
   "nav": {
     "appName": "Бней Бріт",
     "dashboard": "Панель керування",
-    "myJobs": "Мої роботи"
+    "myJobs": "Мої роботи",
+    "addEmployer": "Додати роботодавця",
+    "financialOverview": "Фінансовий огляд"
   },
   "dashboard": {
     "title": "Мої роботи",
@@ -27,7 +29,10 @@
     "totalMonthly": "Всього на місяць",
     "startDate": "Дата початку",
     "yearsEmployed": "Років стажу",
-    "reportAbsence": "Повідомити про відсутність"
+    "reportAbsence": "Повідомити про відсутність",
+    "editEmployer": "Редагувати роботодавця",
+    "editTitle": "Редагування даних роботодавця",
+    "saveChanges": "Зберегти зміни"
   },
   "timer": {
     "startSession": "Почати роботу",
@@ -165,6 +170,38 @@
     "contractSettings": "Налаштування договору",
     "configured": "Налаштовано",
     "notConfigured": "Не налаштовано"
+  },
+  "addEmployer": {
+    "pageTitle": "Додати нового роботодавця",
+    "pageSubtitle": "Введіть дані нового роботодавця",
+    "employerDetails": "Дані роботодавця",
+    "name": "Ім'я роботодавця",
+    "namePlaceholder": "Введіть ім'я роботодавця",
+    "monthlySalary": "Місячна зарплата",
+    "hoursPerWeek": "Годин на тиждень",
+    "startDate": "Дата початку",
+    "rewardSection": "Тип оплати",
+    "cancellationSection": "Політика скасування",
+    "submit": "Додати роботодавця",
+    "cancel": "Скасувати",
+    "saving": "Збереження...",
+    "requiredField": "Обов'язкове поле"
+  },
+  "financial": {
+    "pageTitle": "Фінансовий огляд",
+    "pageSubtitle": "Зведення всіх доходів та пільг",
+    "totalMonthlyEarnings": "Загальний місячний дохід",
+    "totalSessionEarnings": "Загальний дохід від змін",
+    "pendingItems": "Очікувані депозити",
+    "perEmployerBreakdown": "За роботодавцями",
+    "workSessionEarnings": "Дохід від змін",
+    "sessionsCompleted": "Змін завершено",
+    "totalHoursWorked": "Всього відпрацьовано годин",
+    "pensionContributions": "Пенсійні внески",
+    "quarterlyNI": "Квартальне нац. страхування",
+    "noSessions": "Немає змін",
+    "noPendingItems": "Немає очікуваних депозитів",
+    "allDepositsCompliant": "Всі депозити в порядку"
   },
   "chat": {
     "title": "Помічник з прав",

@@ -7,10 +7,48 @@ import HolidayAlertModal from "@/components/holiday-alert-modal";
 import ComplianceSection from "@/components/compliance-section";
 import GeneratePdfButton from "@/components/generate-pdf-button";
 
+function LoadingSkeleton() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8 animate-pulse">
+      {/* Title skeleton */}
+      <div className="mb-8">
+        <div className="h-8 w-48 bg-teal-100 rounded" />
+        <div className="mt-2 h-5 w-64 bg-teal-50 rounded" />
+      </div>
+
+      {/* Balance card skeleton */}
+      <div className="mb-8 rounded-2xl bg-teal-200 p-6 h-32" />
+
+      {/* Employer cards skeleton */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="h-48 rounded-xl bg-gray-100" />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function DashboardContent() {
   const t = useTranslations("dashboard");
   const tc = useTranslations("common");
-  const { employers, totalBalance } = useEmployers();
+  const { employers, totalBalance, isLoading, error } = useEmployers();
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
+
+  if (error) {
+    return (
+      <div className="mx-auto max-w-6xl px-4 py-8">
+        <div className="rounded-xl bg-red-50 border border-red-200 p-6 text-center">
+          <p className="text-red-700 font-medium">
+            {error}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">

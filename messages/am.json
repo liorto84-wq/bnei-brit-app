@@ -8,7 +8,9 @@
   "nav": {
     "appName": "ብኒ ብሪት",
     "dashboard": "ዳሽቦርድ",
-    "myJobs": "ሥራዎቼ"
+    "myJobs": "ሥራዎቼ",
+    "addEmployer": "አሠሪ ጨምር",
+    "financialOverview": "የገንዘብ አጠቃላይ እይታ"
   },
   "dashboard": {
     "title": "ሥራዎቼ",
@@ -27,7 +29,10 @@
     "totalMonthly": "ጠቅላላ ወርሃዊ",
     "startDate": "የጀመረበት ቀን",
     "yearsEmployed": "የሥራ ዓመታት",
-    "reportAbsence": "ቀሪነት ሪፖርት"
+    "reportAbsence": "ቀሪነት ሪፖርት",
+    "editEmployer": "አሠሪ አርትዕ",
+    "editTitle": "የአሠሪ መረጃ አርትዕ",
+    "saveChanges": "ለውጦችን አስቀምጥ"
   },
   "timer": {
     "startSession": "ሥራ ጀምር",
@@ -165,6 +170,38 @@
     "contractSettings": "የውል ቅንብሮች",
     "configured": "ተዋቅሯል",
     "notConfigured": "አልተዋቀረም"
+  },
+  "addEmployer": {
+    "pageTitle": "አዲስ አሠሪ ጨምር",
+    "pageSubtitle": "የአዲሱን አሠሪ መረጃ ያስገቡ",
+    "employerDetails": "የአሠሪ መረጃ",
+    "name": "የአሠሪ ስም",
+    "namePlaceholder": "የአሠሪ ስም ያስገቡ",
+    "monthlySalary": "ወርሃዊ ደመወዝ",
+    "hoursPerWeek": "በሳምንት ሰዓታት",
+    "startDate": "የጀመረበት ቀን",
+    "rewardSection": "የክፍያ ዓይነት",
+    "cancellationSection": "የስረዛ ፖሊሲ",
+    "submit": "አሠሪ ጨምር",
+    "cancel": "ሰርዝ",
+    "saving": "በማስቀመጥ ላይ...",
+    "requiredField": "አስፈላጊ መስክ"
+  },
+  "financial": {
+    "pageTitle": "የገንዘብ አጠቃላይ እይታ",
+    "pageSubtitle": "የሁሉም ገቢዎች እና ጥቅማጥቅሞች ማጠቃለያ",
+    "totalMonthlyEarnings": "ጠቅላላ ወርሃዊ ገቢ",
+    "totalSessionEarnings": "ጠቅላላ የፈረቃ ገቢ",
+    "pendingItems": "በመጠባበቅ ላይ ያሉ ተቀማጭ",
+    "perEmployerBreakdown": "በአሠሪ ፍርስራሽ",
+    "workSessionEarnings": "የፈረቃ ገቢ",
+    "sessionsCompleted": "የተጠናቀቁ ፈረቃዎች",
+    "totalHoursWorked": "ጠቅላላ የሰሩ ሰዓታት",
+    "pensionContributions": "የጡረታ መዋጮ",
+    "quarterlyNI": "ሩብ ዓመታዊ ብሔራዊ ኢንሹራንስ",
+    "noSessions": "ፈረቃዎች የሉም",
+    "noPendingItems": "በመጠባበቅ ላይ ያሉ ተቀማጭ የሉም",
+    "allDepositsCompliant": "ሁሉም ተቀማጭ ተገዢ ናቸው"
   },
   "chat": {
     "title": "የመብቶች ረዳት",

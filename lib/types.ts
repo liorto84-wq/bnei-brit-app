@@ -77,3 +77,24 @@ export interface QuarterlyNIEstimate {
 }
 
 export type ComplianceViewMode = "worker" | "employer";
+
+// Contract Setup types
+export type RewardType = "hourly" | "daily" | "global";
+
+export interface CancellationPolicy {
+  /** Minimum notice hours before cancellation for full pay (default: 24) */
+  noticeHours: number;
+  /** Pay percentage when cancelled with less than noticeHours (default: 100) */
+  shortNoticePayPercent: number;
+}
+
+export interface ContractConfig {
+  employerId: string;
+  rewardType: RewardType;
+  cancellationPolicy: CancellationPolicy;
+  /** Daily rate (relevant when rewardType is 'daily') */
+  dailyRate?: number;
+  /** Global monthly amount (relevant when rewardType is 'global') */
+  globalMonthlyAmount?: number;
+  notes?: string;
+}

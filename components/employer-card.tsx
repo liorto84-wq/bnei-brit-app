@@ -3,8 +3,11 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import type { EmployerWithBenefits } from "@/lib/types";
+import { useEmployers } from "@/contexts/employer-context";
 import WorkSessionTimer from "./work-session-timer";
 import AbsenceModal from "./absence-modal";
+import ContractSetupModal from "./contract-setup-modal";
+import EditEmployerModal from "./edit-employer-modal";
 
 export default function EmployerCard({
   employer,
@@ -13,23 +16,52 @@ export default function EmployerCard({
 }) {
   const t = useTranslations("employer");
   const tc = useTranslations("common");
+  const tContract = useTranslations("contract");
+  const { getContractConfig } = useEmployers();
   const [showAbsenceModal, setShowAbsenceModal] = useState(false);
+  const [showContractModal, setShowContractModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+
+  const contractConfig = getContractConfig(employer.id);
+  const rewardTypeLabels = {
+    hourly: tContract("hourly"),
+    daily: tContract("daily"),
+    global: tContract("global"),
+  };
 
   return (
     <>
       <div className="rounded-2xl border border-teal-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
         <div className="mb-4 flex items-start justify-between">
           <div>
-            <h3 className="text-lg font-semibold text-teal-900">
-              {employer.name}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-teal-900">
+                {employer.name}
+              </h3>
+              <button
+                onClick={() => setShowEditModal(true)}
+                className="rounded-md p-1 text-teal-500 transition-colors hover:bg-teal-50 hover:text-teal-700"
+                title={t("editEmployer")}
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </button>
+            </div>
             <p className="text-sm text-teal-600">
               {employer.hoursPerWeek} {tc("hours")}/{tc("perMonth")} ·{" "}
               {t("yearsEmployed")}: {employer.benefits.yearsEmployed}
             </p>
           </div>
-          <div className="rounded-lg bg-teal-50 px-3 py-1 text-sm font-medium text-teal-700">
-            {t("startDate")}: {new Date(employer.startDate).toLocaleDateString()}
+          <div className="flex flex-col items-end gap-1">
+            <div className="rounded-lg bg-teal-50 px-3 py-1 text-sm font-medium text-teal-700">
+              {t("startDate")}: {new Date(employer.startDate).toLocaleDateString()}
+            </div>
+            {contractConfig && (
+              <span className="rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">
+                {rewardTypeLabels[contractConfig.rewardType]}
+              </span>
+            )}
           </div>
         </div>
 
@@ -80,12 +112,33 @@ export default function EmployerCard({
         >
           {t("reportAbsence")}
         </button>
+
+        <button
+          onClick={() => setShowContractModal(true)}
+          className="mt-2 w-full rounded-lg border border-teal-300 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-700 transition-colors hover:bg-teal-100"
+        >
+          {tContract("contractSettings")}
+        </button>
       </div>
 
       {showAbsenceModal && (
         <AbsenceModal
           employer={employer}
           onClose={() => setShowAbsenceModal(false)}
+        />
+      )}
+
+      {showContractModal && (
+        <ContractSetupModal
+          employer={employer}
+          onClose={() => setShowContractModal(false)}
+        />
+      )}
+
+      {showEditModal && (
+        <EditEmployerModal
+          employer={employer}
+          onClose={() => setShowEditModal(false)}
         />
       )}
     </>

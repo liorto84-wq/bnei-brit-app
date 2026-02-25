@@ -8,7 +8,9 @@
   "nav": {
     "appName": "بني بريت",
     "dashboard": "لوحة التحكم",
-    "myJobs": "وظائفي"
+    "myJobs": "وظائفي",
+    "addEmployer": "إضافة صاحب عمل",
+    "financialOverview": "نظرة مالية"
   },
   "dashboard": {
     "title": "وظائفي",
@@ -27,7 +29,10 @@
     "totalMonthly": "الإجمالي الشهري",
     "startDate": "تاريخ البدء",
     "yearsEmployed": "سنوات العمل",
-    "reportAbsence": "الإبلاغ عن غياب"
+    "reportAbsence": "الإبلاغ عن غياب",
+    "editEmployer": "تعديل صاحب العمل",
+    "editTitle": "تعديل بيانات صاحب العمل",
+    "saveChanges": "حفظ التغييرات"
   },
   "timer": {
     "startSession": "بدء العمل",
@@ -165,6 +170,38 @@
     "contractSettings": "إعدادات العقد",
     "configured": "تم الإعداد",
     "notConfigured": "لم يتم الإعداد"
+  },
+  "addEmployer": {
+    "pageTitle": "إضافة صاحب عمل جديد",
+    "pageSubtitle": "أدخل بيانات صاحب العمل الجديد",
+    "employerDetails": "بيانات صاحب العمل",
+    "name": "اسم صاحب العمل",
+    "namePlaceholder": "أدخل اسم صاحب العمل",
+    "monthlySalary": "الراتب الشهري",
+    "hoursPerWeek": "ساعات في الأسبوع",
+    "startDate": "تاريخ البدء",
+    "rewardSection": "نوع المكافأة",
+    "cancellationSection": "سياسة الإلغاء",
+    "submit": "إضافة صاحب عمل",
+    "cancel": "إلغاء",
+    "saving": "جارٍ الحفظ...",
+    "requiredField": "حقل مطلوب"
+  },
+  "financial": {
+    "pageTitle": "نظرة مالية عامة",
+    "pageSubtitle": "ملخص جميع الأرباح والمزايا",
+    "totalMonthlyEarnings": "إجمالي الأرباح الشهرية",
+    "totalSessionEarnings": "إجمالي أرباح الورديات",
+    "pendingItems": "إيداعات معلقة",
+    "perEmployerBreakdown": "تفصيل حسب صاحب العمل",
+    "workSessionEarnings": "أرباح الورديات",
+    "sessionsCompleted": "ورديات مكتملة",
+    "totalHoursWorked": "إجمالي ساعات العمل",
+    "pensionContributions": "مساهمات المعاش",
+    "quarterlyNI": "تأمين وطني ربع سنوي",
+    "noSessions": "لا توجد ورديات",
+    "noPendingItems": "لا توجد إيداعات معلقة",
+    "allDepositsCompliant": "جميع الإيداعات متوافقة"
   },
   "chat": {
     "title": "مساعد الحقوق",
