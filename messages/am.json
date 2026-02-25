@@ -185,7 +185,42 @@
     "submit": "አሠሪ ጨምር",
     "cancel": "ሰርዝ",
     "saving": "በማስቀመጥ ላይ...",
-    "requiredField": "አስፈላጊ መስክ"
+    "requiredField": "አስፈላጊ መስክ",
+    "stepIdentity": "ማንነት",
+    "stepTerms": "ሁኔታዎች",
+    "stepCancellation": "ፖሊሲ",
+    "next": "ቀጣይ",
+    "back": "ተመለስ",
+    "hourlyRate": "የሰዓት ክፍያ",
+    "addEmployerFab": "አሠሪ ጨምር",
+    "completionMessage": "በጣም ጥሩ! የ{name} ፋይል ዝግጁ ነው፣ መብቶችዎ ተጠብቀዋል።",
+    "estimatedMonthlySalary": "የሚገመት ወርሃዊ ደመወዝ"
+  },
+  "tour": {
+    "tourIdentityTitle": "ደረጃ 1: የአሠሪ ማንነት",
+    "tourIdentityDesc": "የአሠሪውን ስም እና የሥራ መጀመሪያ ቀን ያስገቡ",
+    "tourTermsTitle": "ደረጃ 2: የሥራ ሁኔታዎች",
+    "tourTermsDesc": "የክፍያ ዓይነት ይምረጡ እና የደመወዝ ዝርዝሮችን ያስገቡ",
+    "tourCancelTitle": "ደረጃ 3: የስረዛ ፖሊሲ",
+    "tourCancelDesc": "የቅድሚያ ማስጠንቀቂያ ሰዓታትን እና የዘገየ ስረዛ ክፍያን ያዘጋጁ",
+    "tourSkip": "ዝለል",
+    "tourNext": "ቀጣይ",
+    "tourFinish": "ጨርስ"
+  },
+  "guided": {
+    "offerGuided": "ቅጹን ለመሙላት ልረዳዎት? አንድ በአንድ ጥያቄ እጠይቃለሁ።",
+    "askName": "የአሠሪ ስም ምንድን ነው?",
+    "askStartDate": "ሥራ መቼ ጀመሩ? (ምሳሌ: 2024-01-15)",
+    "askRewardType": "የክፍያ ዓይነት ምንድን ነው? (በሰዓት / በቀን / ጠቅላላ)",
+    "askHourlyRate": "በሰዓት ስንት ነው ክፍያው (በሸቅል)?",
+    "askDailyRate": "በቀን ስንት ነው ክፍያው (በሸቅል)?",
+    "askGlobalAmount": "ቋሚ ወርሃዊ መጠኑ ስንት ነው (በሸቅል)?",
+    "askHours": "በሳምንት ስንት ሰዓታት?",
+    "askNoticeHours": "ለስረዛ ስንት ሰዓታት ቅድሚያ ማስጠንቀቂያ? (ነባሪ: 24)",
+    "askShortNoticePercent": "በዘገየ ስረዛ ስንት ፐርሰንት ክፍያ? (ነባሪ: 100%)",
+    "guidedDone": "በጣም ጥሩ! ሁሉም ተሞልቷል። ዝርዝሮቹን ያረጋግጡ እና ላክ የሚለውን ይጫኑ።",
+    "invalidInput": "አልገባኝም። እንደገና ይሞክሩ።",
+    "confirmedField": "ተመዝግቧል: {field} = {value}"
   },
   "financial": {
     "pageTitle": "የገንዘብ አጠቃላይ እይታ",

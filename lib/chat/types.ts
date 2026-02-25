@@ -16,6 +16,7 @@ export type TopicId =
   | "minimum_wage"
   | "worker_rights"
   | "my_status"
+  | "add_employer"
   | "general";
 
 export interface ChatMessage {

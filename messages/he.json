@@ -185,7 +185,42 @@
     "submit": "הוסף מעסיק",
     "cancel": "ביטול",
     "saving": "שומר...",
-    "requiredField": "שדה חובה"
+    "requiredField": "שדה חובה",
+    "stepIdentity": "זיהוי",
+    "stepTerms": "תנאים",
+    "stepCancellation": "מדיניות",
+    "next": "הבא",
+    "back": "חזרה",
+    "hourlyRate": "שכר שעתי",
+    "addEmployerFab": "הוסף מעסיק",
+    "completionMessage": "מצוין! התיק של {name} מוכן, והזכויות שלך מאובטחות.",
+    "estimatedMonthlySalary": "שכר חודשי משוער"
+  },
+  "tour": {
+    "tourIdentityTitle": "שלב 1: זיהוי מעסיק",
+    "tourIdentityDesc": "הזן את שם המעסיק ותאריך תחילת העבודה",
+    "tourTermsTitle": "שלב 2: תנאי העסקה",
+    "tourTermsDesc": "בחר סוג תגמול והזן את פרטי השכר",
+    "tourCancelTitle": "שלב 3: מדיניות ביטולים",
+    "tourCancelDesc": "הגדר שעות הודעה מראש ותשלום ביטול מאוחר",
+    "tourSkip": "דלג",
+    "tourNext": "הבא",
+    "tourFinish": "סיום"
+  },
+  "guided": {
+    "offerGuided": "רוצה שאעזור לך למלא את הטופס? אני יכול לשאול אותך שאלות אחת אחת.",
+    "askName": "מה שם המעסיק?",
+    "askStartDate": "מתי התחלת לעבוד? (לדוגמה: 2024-01-15)",
+    "askRewardType": "מהו סוג התגמול? (שעתי / יומי / גלובלי)",
+    "askHourlyRate": "כמה השכר לשעה (ב-₪)?",
+    "askDailyRate": "כמה השכר ליום (ב-₪)?",
+    "askGlobalAmount": "מה הסכום החודשי הקבוע (ב-₪)?",
+    "askHours": "כמה שעות בשבוע?",
+    "askNoticeHours": "כמה שעות הודעה מראש לביטול? (ברירת מחדל: 24)",
+    "askShortNoticePercent": "כמה אחוז תשלום בביטול מאוחר? (ברירת מחדל: 100%)",
+    "guidedDone": "מעולה! סיימתי למלא הכל. בדוק את הפרטים ולחץ על שלח.",
+    "invalidInput": "לא הבנתי. נסה שוב.",
+    "confirmedField": "נרשם: {field} = {value}"
   },
   "financial": {
     "pageTitle": "סקירה פיננסית",

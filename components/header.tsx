@@ -12,7 +12,6 @@ export default function Header() {
 
   const navLinks = [
     { href: "/" as const, label: t("dashboard") },
-    { href: "/add-employer" as const, label: t("addEmployer") },
     { href: "/financial-overview" as const, label: t("financialOverview") },
   ];
 

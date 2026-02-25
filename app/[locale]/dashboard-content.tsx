@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEmployers } from "@/contexts/employer-context";
+import { Link } from "@/i18n/navigation";
 import EmployerCard from "@/components/employer-card";
 import HolidayAlertModal from "@/components/holiday-alert-modal";
 import ComplianceSection from "@/components/compliance-section";
@@ -32,6 +33,7 @@ function LoadingSkeleton() {
 export default function DashboardContent() {
   const t = useTranslations("dashboard");
   const tc = useTranslations("common");
+  const tAdd = useTranslations("addEmployer");
   const { employers, totalBalance, isLoading, error } = useEmployers();
 
   if (isLoading) {
@@ -90,6 +92,27 @@ export default function DashboardContent() {
 
       {/* Compliance & Pension Hub */}
       <ComplianceSection />
+
+      {/* FAB — Add Employer */}
+      <Link
+        href="/add-employer"
+        className="fixed bottom-20 end-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-teal-600 text-white shadow-lg transition-transform hover:scale-110 hover:bg-teal-700 active:scale-95"
+        aria-label={tAdd("addEmployerFab")}
+      >
+        <svg
+          className="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2.5}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+      </Link>
     </div>
   );
 }

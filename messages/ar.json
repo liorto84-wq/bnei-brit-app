@@ -185,7 +185,42 @@
     "submit": "إضافة صاحب عمل",
     "cancel": "إلغاء",
     "saving": "جارٍ الحفظ...",
-    "requiredField": "حقل مطلوب"
+    "requiredField": "حقل مطلوب",
+    "stepIdentity": "التعريف",
+    "stepTerms": "الشروط",
+    "stepCancellation": "السياسة",
+    "next": "التالي",
+    "back": "رجوع",
+    "hourlyRate": "الأجر بالساعة",
+    "addEmployerFab": "إضافة صاحب عمل",
+    "completionMessage": "ممتاز! ملف {name} جاهز، وحقوقك محفوظة.",
+    "estimatedMonthlySalary": "الراتب الشهري المقدر"
+  },
+  "tour": {
+    "tourIdentityTitle": "الخطوة 1: تعريف صاحب العمل",
+    "tourIdentityDesc": "أدخل اسم صاحب العمل وتاريخ بدء العمل",
+    "tourTermsTitle": "الخطوة 2: شروط العمل",
+    "tourTermsDesc": "اختر نوع المكافأة وأدخل تفاصيل الأجر",
+    "tourCancelTitle": "الخطوة 3: سياسة الإلغاء",
+    "tourCancelDesc": "حدد ساعات الإشعار المسبق والدفع عند الإلغاء المتأخر",
+    "tourSkip": "تخطي",
+    "tourNext": "التالي",
+    "tourFinish": "إنهاء"
+  },
+  "guided": {
+    "offerGuided": "هل تريد مساعدتي في ملء النموذج؟ يمكنني أن أسألك سؤالاً تلو الآخر.",
+    "askName": "ما اسم صاحب العمل؟",
+    "askStartDate": "متى بدأت العمل؟ (مثال: 2024-01-15)",
+    "askRewardType": "ما نوع المكافأة؟ (بالساعة / يومي / شامل)",
+    "askHourlyRate": "كم الأجر بالساعة (بالشيكل)؟",
+    "askDailyRate": "كم الأجر اليومي (بالشيكل)؟",
+    "askGlobalAmount": "ما المبلغ الشهري الثابت (بالشيكل)؟",
+    "askHours": "كم ساعة في الأسبوع؟",
+    "askNoticeHours": "كم ساعة إشعار مسبق للإلغاء؟ (افتراضي: 24)",
+    "askShortNoticePercent": "كم نسبة الدفع عند الإلغاء المتأخر؟ (افتراضي: 100%)",
+    "guidedDone": "رائع! تم ملء كل شيء. راجع البيانات واضغط إرسال.",
+    "invalidInput": "لم أفهم. حاول مرة أخرى.",
+    "confirmedField": "تم تسجيل: {field} = {value}"
   },
   "financial": {
     "pageTitle": "نظرة مالية عامة",
