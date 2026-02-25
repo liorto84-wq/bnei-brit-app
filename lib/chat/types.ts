@@ -1,3 +1,11 @@
+import type {
+  EmployerWithBenefits,
+  ContractConfig,
+  WorkSession,
+  AbsenceRecord,
+  EmployerDepositStatus,
+} from "@/lib/types";
+
 export type TopicId =
   | "convalescence"
   | "sick_leave"
@@ -7,6 +15,7 @@ export type TopicId =
   | "overtime"
   | "minimum_wage"
   | "worker_rights"
+  | "my_status"
   | "general";
 
 export interface ChatMessage {
@@ -24,4 +33,14 @@ export interface KnowledgeEntry {
 export interface TopicKeywords {
   topicId: TopicId;
   keywords: Record<string, string[]>; // locale → keywords array
+}
+
+/** Live user data passed from React contexts into the chat matcher */
+export interface UserDataContext {
+  employers: EmployerWithBenefits[];
+  contractConfigs: Map<string, ContractConfig>;
+  completedSessions: WorkSession[];
+  activeSessions: Map<string, WorkSession>;
+  absences: AbsenceRecord[];
+  depositStatuses: Map<string, EmployerDepositStatus>;
 }
